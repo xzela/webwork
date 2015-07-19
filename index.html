@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>worker test</h1>
+
+        <script type="text/javascript">
+            if (window.Worker) {
+                // we support web workers
+                var worker = new Worker('worker.js');
+                worker.postMessage("hello, worker");
+            }
+        </script>
+    </body>
+</html>
